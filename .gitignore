@@ -4,24 +4,62 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+
+
+#######################################################################
+#          Rails Ignores
+#######################################################################
 # Ignore bundler config.
-Api/.bundle
+api/.bundle
 
 # Ignore the default SQLite database.
-Api/db/*.sqlite3
-Api/db/*.sqlite3-journal
+api/db/*.sqlite3
+api/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-Api/log/*
-Api/tmp/*
+api/log/*
+api/tmp/*
 !/log/.keep
 !/tmp/.keep
 
 # Ignore uploaded files in development
-Api/storage/*
-!Api/storage/.keep
+api/storage/*
+!api/storage/.keep
 
-Api/.byebug_history
+api/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-Api/config/master.key
+api/config/master.key
+
+#######################################################################
+#          React Ignores
+#######################################################################
+
+# dependencies
+app/node_modules
+app/.pnp
+app/.pnp.js
+
+# testing
+app/coverage
+
+# production
+app/build
+
+# misc
+app/.DS_Store
+app/.env.local
+app/.env.development.local
+app/.env.test.local
+app/.env.production.local
+
+app/npm-debug.log*
+app/yarn-debug.log*
+app/yarn-error.log*
+
+
+#######################################################################
+#          Workflow Ignores
+#######################################################################
+
+.vscode
