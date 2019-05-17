@@ -1,25 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Header, AppContainer, Logo, Link } from './components/common';
+import { Switch, Route, withRouter } from 'react-router-dom'
+import { Home, ProductsList } from './pages'
 
-function App() {
-  return (
-    <AppContainer>
-      <Header>
-        <Logo src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Link
-          to="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </Link>
-      </Header>
-    </AppContainer>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/products" component={ProductsList} extact />
+      </Switch>
+    );
+  }
 }
 
-export default App;
+export default withRouter(App);
