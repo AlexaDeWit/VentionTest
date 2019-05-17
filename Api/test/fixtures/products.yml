@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: BadOne
+  uri: MyString
+  price: 10:50
+  quality_rating: 1
+
+two:
+  name: BetterOne
+  uri: MyString
+  price: 9.99
+  quality_rating: 2
