@@ -2,6 +2,11 @@
 
 ## Getting It Running
 
+### Prerequisites
+
+- A recent version of NodeJS
+- A working version of a ruby environment management tool (rvm etc)
+
 ### FrontEnd
 
 ### Backend
