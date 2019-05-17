@@ -6,10 +6,15 @@
 
 - A recent version of NodeJS
 - A working version of a ruby environment management tool (rvm etc)
+- SQLlite3 installed (required for the ruby gem)
 
 ### FrontEnd
 
 ### Backend
+
+An important note. As this was developed on a Windows 10 operating system, the sqlite3 gem has been changed out.
+
+If one is using the application from another operating system and encountering issues due to this, please update the `Gemfile` to use the normal `sqlite3` gem, rather than the specified fork.
 
 
 ## Note
