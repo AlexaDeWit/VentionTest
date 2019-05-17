@@ -28,6 +28,7 @@ If one is using the application from another operating system and encountering i
 To run the application in development mode:
 
 - Install the ruby dependencies via `bundle install`
+- Seed the database with the product information (the flowers) `rails db:seed`
 - Start Rails via Puma in development mode using `rails server`
 
 
