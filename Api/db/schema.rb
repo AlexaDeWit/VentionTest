@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2019_05_17_061657) do
 
   create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "uri"
-    t.decimal "price"
-    t.integer "quality_rating"
+    t.string "name", null: false
+    t.string "uri", null: false
+    t.decimal "price", null: false
+    t.integer "quality_rating", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
