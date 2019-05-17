@@ -5,8 +5,12 @@
 ### Prerequisites
 
 - A recent version of NodeJS/yarn
+  - https://nodejs.org/en/download/
+  - After installation: `npm install --global yarn`
 - A working version of a ruby environment management tool (rvm etc)
+  - This varies by platform greatly. At present is expected that the evaluator has already performed this step.
 - SQLlite3 installed (required for the ruby gem)
+  - This also varies greatly by platform, but is a typical requirement of early rails project. As such this is assumed based on the same reasoning as the ruby environment.
 
 
 ### FrontEnd
@@ -15,7 +19,7 @@ To run the application in development mode:
 
 - Install the pre-requisite packages via `yarn install`
 - Start the development server via `yarn start`
-- Requests should be proxies through the front-end to the backen.
+- Requests should be proxies through the front-end to the backend.
 
 Production and staging configurations were decided to be out of scope of an assignment, and as such have not been configured. They may work out of the box, they may not.
 
@@ -34,7 +38,7 @@ To run the application in development mode:
 
 ## Notes Regarding Design Choices
 
-At present my full time personal development machine is in storage in preparation for my move. As such this project was implemented on a Surface Go, which runs Windows 10 Home.
+At present my full-time personal development machine is in storage in preparation for my move. As such this project was implemented on a Surface Go, which runs Windows 10 Home.
 
 As a consequence of this, Docker is not viable to run. My initial intention was to allow the evaluator to simply `docker-compose up`.
 
