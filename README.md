@@ -7,6 +7,9 @@
 - A recent version of NodeJS/yarn
   - https://nodejs.org/en/download/
   - After installation: `npm install --global yarn`
+- Git
+  - This is necessary unless one alters the Gemfile, as a fork is required to support the Windows 10 platform.
+  - https://git-scm.com/downloads
 - A working version of a ruby environment management tool (rvm etc)
   - This varies by platform greatly. At present is expected that the evaluator has already performed this step.
 - SQLlite3 installed (required for the ruby gem)
