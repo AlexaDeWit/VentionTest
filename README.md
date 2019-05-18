@@ -49,6 +49,8 @@ Additionally as a consequence of this, using a more robust database implementati
 
 To this end, the "easy route" has been taken of simply using SQLlite3. That said, from the perspective of a rails app using ActiveRecord, the distinction loses considerable importance due to the ORM abstraction layer.
 
+This project intentionally uses JavaScript without the TypeScript compiler. The TypeScript toolchain is infact provided by `create-react-app`, however the assignment specifically refers to JavaScript. For an SPA in a React-Redux-Saga structure, the decoupling introduced, while great for state management, can be more difficult to maintain over a longer period of time, with a greater potential for type errors. As such, TypeScript is normally recommended as a means to prevent common errors, as well as provide additional editor support. The omission of this for this project however is intentional as an interpretation of the intent of the assignment. I simply felt providing a rationale was important for such a decision
+
 ## Unfinished Tasks that would be logical continuations
 
 Scope is something that, if allowed to, never stops growing. As such I have recognized some items that would be intuitively valuable would this be a "real" product, but for which there in practice have little return on their investment in this context.
@@ -59,7 +61,9 @@ Scope is something that, if allowed to, never stops growing. As such I have reco
 - General analytics
 - Rspec definitons for the services
 - Swagger definition of endpoints
-
-In general I have tried to strike a balance between demonstration of competency, and overinvestment in a piece of software that is definitionally intended to be discarded.
+- Structure validations at the request layer for JSON structure. 
+  - Via something like https://github.com/gaku-sei/ts-json-decode
+  - This is a common pattern in other languages I work with so that assumptions and errors can be detected early, resulting in faster dev cycles with less time spent troubleshooting.
+-  In general I have tried to strike a balance between demonstration of competency, and overinvestment in a piece of software that is definitionally intended to be discarded.
 
 If something appears missing, please discuss with me. It may have been omitted for this purpose, or it may be an opportunity for me to learn and grow through that conversation. I say "worth it" in both cases!
