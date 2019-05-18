@@ -1,3 +1,8 @@
+// Global ES6 polyfill, using the full component for safety and simplicity
+// In some settings it might be better to use only the needed features though
+// to reduce size.
+import 'core-js'
+//Module imports
 import React from 'react';
 import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom';

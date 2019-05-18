@@ -48,3 +48,18 @@ As a consequence of this, Docker is not viable to run. My initial intention was 
 Additionally as a consequence of this, using a more robust database implementation would require a global installation, instead of temporary containers. (That or provisioning cloud resources and using a remote DB.)
 
 To this end, the "easy route" has been taken of simply using SQLlite3. That said, from the perspective of a rails app using ActiveRecord, the distinction loses considerable importance due to the ORM abstraction layer.
+
+## Unfinished Tasks that would be logical continuations
+
+Scope is something that, if allowed to, never stops growing. As such I have recognized some items that would be intuitively valuable would this be a "real" product, but for which there in practice have little return on their investment in this context.
+
+
+- Using local storage to cache the cart on the client side.
+- Server-Side caching of product cart for promotional materials and reminders (Presumes user contexts and access to email address)
+- General analytics
+- Rspec definitons for the services
+- Swagger definition of endpoints
+
+In general I have tried to strike a balance between demonstration of competency, and overinvestment in a piece of software that is definitionally intended to be discarded.
+
+If something appears missing, please discuss with me. It may have been omitted for this purpose, or it may be an opportunity for me to learn and grow through that conversation. I say "worth it" in both cases!
