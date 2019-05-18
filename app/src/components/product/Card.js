@@ -5,7 +5,7 @@ import { CardImage, StrongText, Price } from '../common'
 import QualityRating from './QualityRating'
 
 export const IdleCard = styled.div`
-  margin: 2em;
+  margin: 1em;
   padding: 2em;
 	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
