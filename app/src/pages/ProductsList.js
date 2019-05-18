@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Actions as ProductActions } from '../store/product/actions'
 import * as ProductSelectors from '../store/product/reducer'
+import { Grid } from '../components/common'
+import { Card as ProductCard } from '../components/product/Card'
 
 class ProductsList extends React.Component {
   componentDidMount() {
@@ -11,7 +13,10 @@ class ProductsList extends React.Component {
   render() {
     const { products } = this.props
     return (
-      "hi"
+      <Grid
+        dataSource={products}
+        generator={props => <ProductCard {...props} />}
+      />
     );
   }
 
