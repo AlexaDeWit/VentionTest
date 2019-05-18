@@ -22,7 +22,7 @@ To run the application in development mode:
 
 - Install the pre-requisite packages via `yarn install`
 - Start the development server via `yarn start`
-- Requests should be proxies through the front-end to the backend.
+- Requests to `/api` are proxied through the front-end to the backend for development  and local running purposes.
 
 Production and staging configurations were decided to be out of scope of an assignment, and as such have not been configured. They may work out of the box, they may not.
 
