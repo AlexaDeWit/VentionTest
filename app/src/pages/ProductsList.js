@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Actions as ProductActions } from '../store/product/actions'
 import * as ProductSelectors from '../store/product/reducer'
 import { Grid } from '../components/common'
-import { Card as ProductCard } from '../components/product/Card'
+import ProductCard from '../components/product/Card'
 
 class ProductsList extends React.Component {
   componentDidMount() {

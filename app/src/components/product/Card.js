@@ -6,6 +6,7 @@ import { CardImage, StrongText, Price } from '../common'
 import QualityRating from './QualityRating'
 import CartOverlay from '../cart/CartOverlay'
 import * as Cart from '../../store/cart/reducer'
+import { Actions as CartActions } from '../../store/cart/actions'
 
 export const IdleCard = styled.div`
   margin: 1em;
@@ -23,7 +24,7 @@ const itemPropTypes = {
   id: PropTypes.number.isRequired,
 }
 
-export class Card extends React.Component {
+class Card extends React.Component {
 
   constructor(props) {
     super(props)
@@ -34,6 +35,15 @@ export class Card extends React.Component {
 
   handleMouseEnter = () => this.setState({ hover: true })
   handleMouseLeave = () => this.setState({ hover: false })
+
+  handleChange = (isInCart) => {
+    const { item, cartItem, addToCart, removeFromCart } = this.props
+    if (!isInCart) {
+      addToCart(item)
+    } else if (cartItem) {
+      removeFromCart(cartItem)
+    }
+  }
 
   render() {
     const { item, cartItem } = this.props
@@ -46,7 +56,10 @@ export class Card extends React.Component {
         onMouseLeave={this.handleMouseLeave}
         onMouseEnter={this.handleMouseEnter}
       >
-        {hover ? <CartOverlay id={id} isInCart={isInCart} handleChange={() => this.handleChange}>{cardImage}</CartOverlay> : cardImage}
+        {hover
+          ? <CartOverlay id={id} isInCart={isInCart} handleChange={this.handleChange}>{cardImage}</CartOverlay>
+          : cardImage
+        }
         <StrongText>{name}</StrongText>
         <Price>{`$${price.toFixed(2)}`}</Price>
         <QualityRating rating={quality_rating} />
@@ -65,19 +78,20 @@ export class Card extends React.Component {
 }
 
 function getCartItem(state, ownProps) {
-  const { id } = ownProps
-  return Cart.getItems(state)[id]
+  const { item: { id } } = ownProps
+  return Cart.getItemsById(state)[id]
 }
 
 function mapStateToProps(state, ownProps) {
   return {
-    isInCart: getCartItem(state, ownProps)
+    cartItem: getCartItem(state, ownProps)
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-
+    addToCart: (item) => dispatch(CartActions.addItem(item)),
+    removeFromCart: (item) => dispatch(CartActions.removeItem(item)),
   }
 }
 

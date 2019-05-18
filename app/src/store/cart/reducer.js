@@ -3,8 +3,8 @@ const initialState = {
   items: {}
 }
 
-export const getItems = state => Object.keys(state.product.items).map((id) => state.product.items[id])
-export const getItemsById = state => state.product.items
+export const getItems = state => Object.keys(state.cart.items).map((id) => state.cart.items[id])
+export const getItemsById = state => state.cart.items
 
 export default function reducer(s = initialState, action) {
   switch (action.type) {
