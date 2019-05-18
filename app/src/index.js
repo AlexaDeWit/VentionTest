@@ -2,6 +2,8 @@
 // In some settings it might be better to use only the needed features though
 // to reduce size.
 import 'core-js'
+// Globally normalise CSS
+import 'normalize.css'
 //Module imports
 import React from 'react';
 import { Provider } from 'react-redux'
