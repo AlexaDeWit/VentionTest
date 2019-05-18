@@ -8,7 +8,7 @@ export function* list() {
     const { products, count } = data
     yield put(Actions.listResp(products, count))
   } catch (err) {
-    yield put(Actions.listErr(err))
+    yield put(Actions.listErr(err.message))
   }
 }
 

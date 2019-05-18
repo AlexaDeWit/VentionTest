@@ -1,5 +1,2 @@
-export const list = () =>
-  fetch('/api/products')
-    .then(response => {
-      return response.json()
-    })
+import request from './client'
+export const list = () => request('/api/products')
