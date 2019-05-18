@@ -1,21 +1,18 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
-import { Header, AppContainer, Logo, Link } from '../components/common';
+import { Header, AppContainer, Link } from '../components/common';
 
 function Home() {
   return (
     <AppContainer>
       <Header>
-        <Logo src={logo} alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hi! Thank you for looking at my interview test.
         </p>
-        <Link
-          to="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+        <p>
+          Explanations of rationale and approach can be found in the README.md file.
+        </p>
+        <Link to="/products">
+          View the Cards
         </Link>
       </Header>
     </AppContainer>
