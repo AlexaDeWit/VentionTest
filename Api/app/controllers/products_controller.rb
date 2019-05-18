@@ -4,8 +4,9 @@ class ProductsController < ApplicationController
   # GET /products
   def index
     @products = Product.all
+    @count = Product.count
 
-    render json: @products
+    render json: { count: @count, products: @products }
   end
 
   # GET /products/1

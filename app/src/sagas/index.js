@@ -1,21 +1,15 @@
-import { spawn, call, takeEvery, select } from 'redux-saga/effects'
-
-function* storeErrors() {
-  yield takeEvery((action) => action && action.payload && action.payload.err, function*(action) {
-    yield select()
-    const { err } = action.payload
-    throw err
-  })
-}
+import { spawn, call, all } from 'redux-saga/effects'
+import createSagaMiddleware from 'redux-saga'
+import product from './product'
 
 export default function* rootSaga() {
 
   const sagas = [
-    storeErrors
+    product,
   ]
 
-  yield sagas.map((saga) =>
-    spawn(function*() {
+  yield all(sagas.map((saga) =>
+    spawn(function* () {
       // Restart any crashing sagas.
       while (true) {
         try {
@@ -27,5 +21,8 @@ export default function* rootSaga() {
         }
       }
     }),
-  )
+  ))
+
 }
+
+export const sagaMiddleware = createSagaMiddleware()

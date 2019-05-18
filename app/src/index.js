@@ -9,10 +9,10 @@ import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router'
 import './index.css';
 import createStore from './store'
-import createHistory from 'history/createBrowserHistory'
+import { createBrowserHistory } from 'history'
 import App from './App';
 
-const history = createHistory()
+const history = createBrowserHistory()
 const store = createStore(history)
 
 ReactDOM.render(
