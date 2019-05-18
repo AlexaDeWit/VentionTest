@@ -16,6 +16,7 @@ class ProductsList extends React.Component {
       <Grid
         dataSource={products}
         generator={props => <ProductCard {...props} />}
+        getKey={product => product.id}
       />
     );
   }
