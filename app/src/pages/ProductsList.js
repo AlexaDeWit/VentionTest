@@ -15,7 +15,7 @@ class ProductsList extends React.Component {
     return (
       <Grid
         dataSource={products}
-        generator={props => <ProductCard {...props} />}
+        generator={props => <ProductCard item={props} />}
         getKey={product => product.id}
       />
     );

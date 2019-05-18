@@ -20,19 +20,19 @@ export const InactiveStar = styled.span`
   margin: 2px;
 `;
 
-const Rating = ({ rating }) => {
+const QualityRating = ({ rating }) => {
   return (
     <StarWrapper>
       {Array.from(Array(5).keys()).map(k => {
         if (rating <= k) {
           return (
-            <InactiveStar>
+            <InactiveStar key={k}>
               <Image src={star} />
             </InactiveStar>
           )
         } else {
           return (
-            <ActiveStar>
+            <ActiveStar key={k}>
               <Image src={star} />
             </ActiveStar>
           )
@@ -42,4 +42,4 @@ const Rating = ({ rating }) => {
   )
 }
 
-export default Rating
+export default QualityRating
